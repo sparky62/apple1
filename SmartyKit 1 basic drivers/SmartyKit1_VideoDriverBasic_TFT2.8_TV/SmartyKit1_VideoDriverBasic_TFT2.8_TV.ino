@@ -19,11 +19,11 @@
 
 #include <SPI.h>
 
-#undef _TERMINAL_ //turn off Terminal
-//#define _TERMINAL_ //turn on Terminal
+//#undef _TERMINAL_ //turn off Terminal
+#define _TERMINAL_ //turn on Terminal
 
 #ifdef _TERMINAL_
-#include <Terminal.h>
+#include "Terminal.h"
 // Create a terminal in TWI mode
 Terminal term; //uses A4 (SDA) and A5 (SCL) that conflict with other usage of A4-A5
                //so we need to put CS on low, RST = A0, DC = A1, MOSI = A2, SCK = A3, MISO = not connected (NC)
