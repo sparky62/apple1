@@ -460,6 +460,8 @@ uint8_t Terminal::sendI2C(uint8_t c)
 {
   uint8_t retCode = 0;
 
+  Serial.write(c);
+  
   if (!_transmitting)
   {
     // send start
